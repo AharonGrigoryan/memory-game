@@ -11,7 +11,8 @@ body {
 
 .wrapper {
     box-sizing: content-box;
-  
+    width: min(100% - 1em, 69em);
+    margin-inline: auto;
     padding: 2.5em;
     background-color: #ffffff;
     position: absolute;
@@ -23,10 +24,8 @@ body {
 }
 
 .game-container {
-    width: min(100% - 1em, 50em);
-    margin-inline: auto;
     position: relative;
-    /* width: 100%; */
+    width: 100%;
     display: grid;
     gap: 0.6em;
 }
