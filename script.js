@@ -11,7 +11,7 @@ let cards;
 let interval;
 let firstCard = false;
 let secondCard = false;
-let firstCardValue
+let firstCardValue;
 
 const items = [
   { name: "duck", image: "/animal/duck.png" },
@@ -91,7 +91,7 @@ const matrixGenerator = (cardValues, size = 4) => {
         card.classList.add("flipped");
         if (!firstCard) {
           firstCard = card;
-      firstCardValue = card.getAttribute("data-card-value");
+          firstCardValue = card.getAttribute("data-card-value");
         } else {
           movesCounter();
           secondCard = card;
@@ -122,7 +122,7 @@ const matrixGenerator = (cardValues, size = 4) => {
 
 startButton.addEventListener("click", () => {
   movesCount = 0;
-  seconds =0, minutes = 0;
+  (seconds = 0), (minutes = 0);
 
   controls.classList.add("hide");
 
@@ -132,7 +132,7 @@ startButton.addEventListener("click", () => {
   interval = setInterval(timeGenerator, 1000);
 
   moves.innerHTML = `<span>Moves:</span>${movesCount}`;
- 
+
   initializer();
 });
 
@@ -143,7 +143,6 @@ stopButton.addEventListener(
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
     clearInterval(interval);
-  
   })
 );
 
